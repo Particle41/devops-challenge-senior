@@ -9,7 +9,7 @@ You will have **4 hours** to complete the challenge.
 
 ## The challenge
 
-You must use Terraform for all the following tasks. You can use modules from the Terraform registry.
+You must use either Terraform or AWS CloudFormation for all the following tasks. You can use modules from the Terraform registry.
 
 - Create code for deploying a VPC in AWS with 2 public and 2 private subnets.
 
@@ -23,7 +23,7 @@ You must use Terraform for all the following tasks. You can use modules from the
 ## Criteria
 
 
-Your task will be considered successful if a colleague is able to deploy your Terraform infrastructure to an AWS account.
+Your task will be considered successful if a colleague is able to deploy your infrastructure to an AWS account.
 
 Other criteria for evaluation will be:
 
