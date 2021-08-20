@@ -1,4 +1,4 @@
-# Particle41 DevOps Challange - Senior level
+# Particle41 DevOps Challenge - Senior level
 
 This is a senior-level challenge for candidates who want to join the Particle41 DevOps team.
 
