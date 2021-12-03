@@ -1,29 +1,6 @@
 _TESTING THIS CHALLENGE WILL CREATE RESOURCES IN YOUR AWS ACCOUNT AND WILL COST A FEW DOLLARS.   
 IF THIS IS A PROBLEM FOR YOU, LET US KNOW AND WE WILL PROVIDE YOU WITH AN API KEY TO USE._
 
-- [Welcome to the Particle41 Engineering Team Candidate Challenge](#welcome-to-the-particle41-engineering-team-candidate-challenge)
-  * [Summary](#summary)
-- [The Challenge](#the-challenge)
-  * [Application Development / Docker / Kubernetes](#application-development---docker---kubernetes)
-    + [Tiny App Development: 'SimpleTimeService'](#tiny-app-development---simpletimeservice-)
-    + [Dockerize SimpleTimeService](#dockerize-simpletimeservice)
-    + [Create a k8s manifest for SimpleTimeService](#create-a-k8s-manifest-for-simpletimeservice)
-    + [Document your work](#document-your-work)
-  * [Terraform: Create and Use a Module](#terraform--create-and-use-a-module)
-    + [Create my_eks_cluster module](#create-my-eks-cluster-module)
-    + [Use my_eks_cluster module to create EKS cluster](#use-my-eks-cluster-module-to-create-eks-cluster)
-    + [Document your work](#document-your-work-1)
-- [Acceptance Criteria](#acceptance-criteria)
-  * [simpletimeservice app/Docker container/k8s manifest](#simpletimeservice-app-docker-container-k8s-manifest)
-  * [Terraform](#terraform)
-- [Notes](#notes)
-  * [Documentation](#documentation)
-  * [Suggested Repo Structure](#suggested-repo-structure)
-  * [Extra Credit!](#extra-credit-)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-
 # Welcome to the Particle41 Engineering Team Candidate Challenge
 
 This challenge is for candidates who want to join the Particle41 (P41) engineering team ("DevOps").
