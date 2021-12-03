@@ -1,6 +1,29 @@
 _TESTING THIS CHALLENGE WILL CREATE RESOURCES IN YOUR AWS ACCOUNT AND WILL COST A FEW DOLLARS.   
 IF THIS IS A PROBLEM FOR YOU, LET US KNOW AND WE WILL PROVIDE YOU WITH AN API KEY TO USE._
 
+- [Welcome to the Particle41 Engineering Team Candidate Challenge](#welcome-to-the-particle41-engineering-team-candidate-challenge)
+  * [Summary](#summary)
+- [The Challenge](#the-challenge)
+  * [Application Development / Docker / Kubernetes](#application-development---docker---kubernetes)
+    + [Tiny App Development: 'SimpleTimeService'](#tiny-app-development---simpletimeservice-)
+    + [Dockerize SimpleTimeService](#dockerize-simpletimeservice)
+    + [Create a k8s manifest for SimpleTimeService](#create-a-k8s-manifest-for-simpletimeservice)
+    + [Document your work](#document-your-work)
+  * [Terraform: Create and Use a Module](#terraform--create-and-use-a-module)
+    + [Create my_eks_cluster module](#create-my-eks-cluster-module)
+    + [Use my_eks_cluster module to create EKS cluster](#use-my-eks-cluster-module-to-create-eks-cluster)
+    + [Document your work](#document-your-work-1)
+- [Acceptance Criteria](#acceptance-criteria)
+  * [simpletimeservice app/Docker container/k8s manifest](#simpletimeservice-app-docker-container-k8s-manifest)
+  * [Terraform](#terraform)
+- [Notes](#notes)
+  * [Documentation](#documentation)
+  * [Suggested Repo Structure](#suggested-repo-structure)
+  * [Extra Credit!](#extra-credit-)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 # Welcome to the Particle41 Engineering Team Candidate Challenge
 
 This challenge is for candidates who want to join the Particle41 (P41) engineering team ("DevOps").
@@ -23,11 +46,9 @@ This assessment is in two parts, with an extra-credit section at the end.   The 
 
 ---
 
-# The Challenge
+# Task 1 - Minimalist Application Development / Docker / Kubernetes
 
-## Application Development / Docker / Kubernetes
-
-### Tiny App Development: 'SimpleTimeService'
+## Tiny App Development: 'SimpleTimeService'
 
 - Create a simple microservice (which we will call "SimpleTimeService") in any programming language of your choice: NodeJS, Python, C#, Ruby, whatever you like.  
 - The application should be a web server that returns a pure JSON response with the following structure, when its `/` URL path is accessed:
@@ -40,63 +61,25 @@ This assessment is in two parts, with an extra-credit section at the end.   The 
 ```
 
 
-### Dockerize SimpleTimeService
+## Dockerize SimpleTimeService
 
 - Create a Dockerfile for this microservice.
 - Your application must be configured to run as a non-root user in the container.
 - Publish the image to a public DockerHub repo so we can pull it for testing.
 
-### Create a k8s manifest for SimpleTimeService
+
+## Create a k8s manifest for SimpleTimeService
 
 - Create a Kubernetes manifest in YAML format, containing a Deployment and a Service, to deploy your microservice on Kubernetes. 
 - Your Deployment must use your public Docker image from DockerHub.
 
-### Document your work
 
-As described in [Documentation](##Documentation)
-
-
----
-
-## Terraform: Create and Use a Module
-
-### Create my_eks_cluster module
-
-Create a Terraform module called "my_eks_cluster" with the following specs:
-
-- Takes vpc ID and cluster name as input variables (others may be needed - you're the expert, right?)
-- Creates EKS cluster using the VPC ID and cluster name provided by variables
-- The cluster must have 2 nodes, using instance type `t3a.large`. 
-- The nodes must be on the private subnets only.
-
-Of course, you may use popular public registry modules (e.g. the eks module).
-
-### Use my_eks_cluster module to create EKS cluster
-
-Create a root module in terraform that creates the following resources
-
-- A VPC with 2 public and 2 private subnets
-- An EKS cluster using the 'my_eks_cluster' module you created in the previous section
-
-
-As before, you may use popular public registry modules (e.g. the vpc module)
-
----
-
-### Document your work
-
-For notes about this, see [Documentation](##Documentation) below
-
-
-
-
-# Acceptance Criteria
-
-## simpletimeservice app/Docker container/k8s manifest
+## Acceptance Criteria
 
 Your task will be considered successful if a colleague is able to deploy your manifests to a running Kubernetes cluster and use your microservice.   We will use Docker Desktop to test this exercise.
 
-Assuming that your manifest file is named `microservice.yml` (but you can name it whatever you want), the command:
+Assuming that your manifest file is named `microservice.yml`, the command:
+
 
 ```sh
 kubectl apply -f microservice.yml # i.e. your manifest file
@@ -117,9 +100,37 @@ Other criteria for evaluation will be:
 
 Code quality and style: your code / Dockerfile / k8s manifest must be technically correct, easy for others to read, and properly documented when relevant
 
+For notes about this, see [Documentation](##Documentation) below
+
+
 ---
 
-## Terraform
+# Task 2 - Terraform: Create and Use a Module
+
+## Create my_eks_cluster module
+
+Create a Terraform module called "my_eks_cluster" with the following specs:
+
+- Takes vpc ID and cluster name as input variables (others may be needed - you're the expert, right?)
+- Creates EKS cluster using the VPC ID and cluster name provided by variables
+- The cluster must have 2 nodes, using instance type `t3a.large`. 
+- The nodes must be on the private subnets only.
+
+Of course, you may use popular public registry modules (e.g. the eks module).
+
+## Use my_eks_cluster module to create EKS cluster
+
+Create a root module in terraform that creates the following resources
+
+- A VPC with 2 public and 2 private subnets
+- An EKS cluster using the 'my_eks_cluster' module you created in the previous section
+
+
+As before, you may use popular public registry modules (e.g. the vpc module)
+
+---
+
+## Acceptance Criteria
 
 Your task will be considered successful if a colleague is able to deploy infrastructure to AWS and the correct resources are created.
 
@@ -139,7 +150,9 @@ Other criteria for evaluation will be:
 - Terraform best practices: don't include API keys or any secrets in the code itself (use environment varibles for the AWS api key)
 - Terraform best practices: Use variables in your infrastructure root module, and provide some good defaults in terraform.tfvars
 
-# Notes
+---
+
+# Notes, Suggestions, and the opportunity to 'show off'!
 
 ## Documentation
 
