@@ -58,6 +58,20 @@ work with the team._
 - Publish your code to a public Git repository in a platform of your choice
   (e.g. GitHub, GitLab, Bitbucket, etc.), so that it can be cloned by the team.
 
+## A word about generative AI
+
+It is ok to use generative AI to complete this challenge, but we want to be sure
+that you know what you're doing.
+
+The acceptance criteria for the solution are clearly defined below. Regardless
+of using generative AI, your solution must pass those acceptance criteria. If it
+passes, we're ok with it and you'll move on to the next step in the selection
+process.
+
+So, this is our advice: if you use generative AI, make sure that your solution
+works as expected and passes the criteria as explained below. Don't waste our
+time (and yours!) submitting a solution that doesn't work.
+
 ---
 
 # Task 1 - Minimalist Application Development / Docker / Kubernetes
