@@ -20,7 +20,8 @@ technologies and concepts:
 
 - Software development (in general), by creating an extremely minimal web
   service.
-- Docker, including creating a Docker container image from scratch
+- Containers, including creating a container container image from scratch and
+  publishing it.
 - Kubernetes, in particular the AWS cloud-native flavor of Kubernetes (Elastic
   Kubernetes Service).
 - Terraform, including writing a module and using it to deploy infrastructure.
@@ -28,7 +29,7 @@ technologies and concepts:
   as well as simple deployment instructions.
 
 This assessment consists of two parts, with an extra-credit section at the end.
-The first part asks you to create a small application, dockerize it, and then
+The first part asks you to create a small application, containerize it, and then
 create a Kubernetes manifest for it. The second part asks you to create a
 terraform module to deploy a VPC + EKS cluster, and deploy the application to
 it.
